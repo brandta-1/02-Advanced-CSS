@@ -8,9 +8,10 @@
 
 body {
     background-color: rgb(59, 59, 59);
-    
+
 }
 
+/*flex container for navigation bar*/
 nav {
     background-color: #73000a;
     color: white;
@@ -56,20 +57,13 @@ li {
 
 }
 
-/*
-#About {
-    display: flex;
-    justify-content: space-between;
-    background-color: pink;
-}
-*/
-
+/* CSS for side labels*/
 section {
     width: 20%;
     display: inline-block;
     margin-left: 20px;
     width: 100px;
-    
+
 }
 
 section div {
@@ -80,35 +74,18 @@ section div {
     font-size: 50px;
 }
 
-#About{
+/* Naive approach to page labels with hard-coded pixel values,
+page can be upgraded with flex-box usage */
+#about {
     height: 300px;
 }
 
-#Work{
+#work {
     height: 450px;
 }
 
-section div img {
-    max-height: 200px;
-}
 
-section div h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.float-left {
-    position: relative;
-    bottom: 10px;
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
+/*CSS for right-sided page content, */
 aside {
     margin-right: 20px;
     padding: 20px;
@@ -117,18 +94,26 @@ aside {
     width: 85%;
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
+}
 
+/*float-left class CSS applies to about image and its caption*/
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+
+/*only affects about image, not its caption*/
+#pic1 {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
 }
 
 aside div {
-    
     margin-bottom: 32px;
-    
     color: #ffffff;
     background-color: #73000a;
     padding: 10px;
-
 }
 
 
@@ -137,88 +122,74 @@ aside div {
     padding-bottom: 30px;
     text-align: justify;
     font-size: 25px;
-
 }
 
-#bc{
+#bc {
     text-decoration: none;
     color: grey;
     font-weight: 900;
 }
 
-
-
-.work{
+/*first deployed application */
+.work {
     position: relative;
-}
-
-.topright {
-    position: absolute;
-    top: 0px;
-    font-size: 20px;
-}
-
-.works{
-    display: inline-block;
-    width: 49%;
-    background-color: rgb(59, 59, 59);
-    
-}
-
-.sub{
-    margin-bottom: 0px;
-    position: relative;
-}
-
-.sub img{
-    width: 100%;
-    height: 187px
-}
-
-#pic1 {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.work img {
-    max-width: 100%;
-}
-
-.work{
     background-color: #73000a;
     width: 50%;
     display: inline-block;
     height: 420px;
 }
 
-#work-pic-1{
+#work-pic-1 {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-@media screen and (max-width: 992px){
-    aside{
+/*labels for application image links*/
+.topright {
+    position: absolute;
+    top: 0px;
+    font-size: 20px;
+}
+
+/* 2nd and 3rd applications displayed smaller than 1st*/
+.works {
+    display: inline-block;
+    width: 49%;
+    background-color: rgb(59, 59, 59);
+}
+
+.sub {
+    margin-bottom: 0px;
+    position: relative;
+}
+
+.sub img {
+    width: 100%;
+    height: 187px
+}
+
+/* media query for tablet-sized and smaller screens */
+/* Naive approach to resizing with hard-coded pixel values,
+page can be upgraded with flex-box usage */
+@media screen and (max-width: 992px) {
+    aside {
         max-width: 75%;
     }
 
-    .work{
-        width: 100%;
-    }
-    
-    .works{
+    .work {
         width: 100%;
     }
 
-    #About{
+    .works {
+        width: 100%;
+    }
+
+    #about {
         height: 500px;
     }
 
-    #Work{
+    #work {
         height: 950px;
     }
-
- 
-
 }
